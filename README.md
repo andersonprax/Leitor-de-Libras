@@ -1,4 +1,7 @@
 # Leitor-de-Libras
+
+TCC - TRABALHO DE CONCLUSÃO DA RESIDÊNCIA EM ROBÓTICA E INTELIGÊNCIA ARTIFICIAL APLICADAS A TESTE DE SOFTWARE - CENTRO DE INFORMÁTICA - CIn DA UNIVERSIDADE FEDERAL DE PERNAMBUCO - UFPE
+
  App que identifica os gestos das mãos traduzindo-os em Língua Brasileira de Sinais - Libras. Esse app usa TensorFlow | IA | Deep Learning | Redes Neurais | Visão Computacional | Teachable Machine.
 
  Foi utilizado apenas números em libras para que a aplicação seja capaz de identificar e aprender os mesmos, a fim de que sejam digitados no terminal e urna eletrônica por um braço robótico, sendo esses a princípio simulados no programa CoppeliaSim.
