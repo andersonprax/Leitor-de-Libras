@@ -87,12 +87,14 @@ while True:
                 prediction = model.predict(data)
                 # Índice com cada classe representando um número e extraindo-se a maior probabilidade da classe/índice/número mais predominante na imagem
                 indexVal = np.argmax(prediction)
-                #print(classes[indexVal])
+                img = cv2.flip(img, 1)
                 cv2.putText(img,classes[indexVal],(x_min-50,y_min-65),cv2.FONT_HERSHEY_COMPLEX,3,(0,0,255),5)
 
             except:
                 continue
 
+    img = cv2.flip(img, 1)
+    img = cv2.flip(img, 1)
     cv2.imshow('Imagem',img)
 
     if cv2.waitKey(1) & 0xff == ord('k'):
@@ -267,8 +269,11 @@ while True:
                     b = b + 1
                     
                     if b == len(tituloEleitor):
-                        corrige = input("deseja corrigir? s/n  ")
+
+                        print( "O título de eleitor " + stri + " esta correto?")
+                        corrige = input("deseja corrigir? Digite ""s"" para sim ou ""n"" para não:  ")
                         b = 0
+                        
                         if corrige == "s":
                             edo.moveJoints(19.541772272053, -8.3722136581698, -59.693585723107, 20.955471166084, 69.479757822496, -7.6385420582838) 
                             time.sleep(6)
@@ -279,7 +284,9 @@ while True:
                             time.sleep(6)
                             edo.moveJoints(5.8850685738014, -11.013502451727, -42.66819174507, 7.217201348764, 53.740310880254, -4.4078625808677) 
                             time.sleep(10)
-                                    
+
+            #break???
+                        #else if ou elif ???         
                         if corrige == "n":
                             edo.moveJoints(5.8850685738014, -11.013502451727, -42.66819174507, 7.217201348764, 53.740310880254, -4.4078625808677) #segura
                             time.sleep(6)
@@ -297,8 +304,3 @@ while True:
                             time.sleep(12)
 
             break
-
-
-
-print(titulo)
-print(stri)
